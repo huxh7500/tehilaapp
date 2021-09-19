@@ -20,7 +20,7 @@ const Product = ({product}) => {
                 />
              </Card.Text>
                 <Card.Text as="h4">
-                    <i className="fas fa-shekel-sign"></i> {product.price}
+                    $ {product.price}
                 </Card.Text>
             </Card.Body>
         </Card>

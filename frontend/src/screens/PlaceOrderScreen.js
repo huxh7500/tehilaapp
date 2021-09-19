@@ -42,7 +42,7 @@ const PlaceOrderScreen = ({history}) => {
       }
 
     return (
-        <>
+        <div>
           <CheckoutSteps step1 step2 step3 step4 />
           <Row>
             <Col md={8}>
@@ -86,7 +86,7 @@ const PlaceOrderScreen = ({history}) => {
                               </Link>
                             </Col>
                             <Col md={4}>
-                              {item.qty} x <i className="fas fa-shekel-sign"></i>{item.price} = <i className="fas fa-shekel-sign"></i>{item.qty * item.price}
+                              {item.qty} x ${item.price} = ${item.qty * item.price}
                             </Col>
                           </Row>
                         </ListGroup.Item>
@@ -105,19 +105,19 @@ const PlaceOrderScreen = ({history}) => {
                   <ListGroup.Item>
                     <Row>
                       <Col>Items</Col>
-                      <Col><i className="fas fa-shekel-sign"></i>{cart.itemsPrice}</Col>
+                      <Col>${cart.itemsPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Shipping</Col>
-                      <Col><i className="fas fa-shekel-sign"></i>{cart.shippingPrice}</Col>
+                      <Col>${cart.shippingPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
                       <Col>Total</Col>
-                      <Col><i className="fas fa-shekel-sign"></i>{cart.totalPrice}</Col>
+                      <Col>${cart.totalPrice}</Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
@@ -137,7 +137,7 @@ const PlaceOrderScreen = ({history}) => {
               </Card>
             </Col>
           </Row>
-        </>
+        </div>
       )
 }
 
